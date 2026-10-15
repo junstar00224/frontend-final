@@ -19,10 +19,8 @@ export default function ThemeWrapper({ children }: { children: React.ReactNode }
   return (
     <div
       style={{
-        // 💡 [추가 과제] theme 값에 따라 배경색과 글자색을 삼항 연산자로 설정하세요.
-        //    예: theme === 'dark' ? '#1a1a1a' : '#f5f5f5'
-        backgroundColor: undefined /* TODO */,
-        color: undefined /* TODO */,
+        backgroundColor: theme === 'dark' ? '#1a1a1a' : '#f5f5f5',
+        color: theme === 'dark' ? '#ffffff' : '#222222' ,
         minHeight: '100vh',
         transition: 'all 0.3s',
       }}
