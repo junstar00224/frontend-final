@@ -16,7 +16,7 @@ export default function TodoInput() {
     await addDoc(collection(db, "todos"), {
       text,
       isDone: false,
-      createAt: serverTimestamp(),
+      createdAt: serverTimestamp(),
     });
 
     setText("");
