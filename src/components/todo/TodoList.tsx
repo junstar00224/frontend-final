@@ -23,7 +23,7 @@ export default function TodoList() {
   //    가져온 데이터를 setTodos로 업데이트하세요.
   //    컴포넌트 언마운트 시 구독을 해제하는 클린업 함수를 return하세요.
   useEffect(() => {
-    const q = query(collection(db, "todos"), orderBy("createAt", "desc"));
+    const q = query(collection(db, "todos"), orderBy("createdAt", "desc"));
 
     const unsubscribe = onSnapshot(
       q,
